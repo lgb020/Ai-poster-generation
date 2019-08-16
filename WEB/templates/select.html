@@ -1,0 +1,72 @@
+
+<!-- 导入包 -->
+{% extends 'base.html' %}
+
+<!-- 标题 -->
+{% block title %}
+<title>Select</title>
+{% endblock %}
+
+<!-- 额外内容 -->
+{% block ex %}
+
+{% endblock %} 
+
+<!-- 主函数 -->
+{% block main %}
+<div class="bloc l-bloc" id="bloc-6">
+    <div class="container bloc-lg" style="padding:0">
+      <div class="row">
+        <div class="col">
+          <form action="/upload_select1" method="POST" enctype="multipart/form-data">
+            <input style="opacity:0.5;background-color:#7DE5DA;" type="file" name="file">
+            <input style="opacity:0.5;background-color:#FFDD75;" type="submit" >
+          </form>
+          <img src="{{url_for('static',filename=imagepath_1,_t=val1)}}" class="img-fluid mx-auto d-block lazyload" width="500" />
+          <p class="hero-cta is-revealing" style="visibility: visible;text-align:center;opacity:0.6;"><a class="button button-primary button-shadow" href="select_random1">切换</a></p>
+          <!-- <a href="select_random1" class="btn btn-d btn-lg btn-button-style">切换</a> -->
+        </div>
+        <div class="col">
+          <form action="/upload_select2" method="POST" enctype="multipart/form-data">
+            <input style="opacity:0.5;background-color:#7DE5DA;" type="file" name="file">
+            <input style="opacity:0.5;background-color:#FFDD75;" type="submit" >
+          </form>
+          <img src="{{url_for('static',filename=imagepath_2,_t=val1)}}" class="img-fluid mx-auto d-block lazyload" width="500" />
+          <p class="hero-cta is-revealing" style="visibility: visible;text-align:center;opacity:0.6;"><a class="button button-primary button-shadow" href="select_random2">切换</a></p>
+          <!-- <a href="select_random2" class="btn btn-d btn-lg btn-8-style">切换</a> -->
+        </div>
+      </div>
+    </div>
+</div>
+<div class="bloc l-bloc" id="bloc-7">
+  <div class="container ">
+    <div class="row">
+      <div class="col">
+        <p class="hero-cta is-revealing" style="visibility: visible;text-align:center;opacity:0.6;"><a href="style" class="button button-primary btn-lg btn-11-style">确定选择<br></a></p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+<!-- 脚本内容 -->
+{% block js %}
+<script src="{{url_for('static',filename='js/jquery-3.3.1.min.js')}}"></script>
+<script src="{{url_for('static',filename='js/bootstrap.bundle.min.js')}}"></script>
+<script src="{{url_for('static',filename='js/blocs.min.js')}}"></script>
+<script src="{{url_for('static',filename='js/lazysizes.min.js')}}" defer></script>
+<script src="{{url_for('static',filename='js/scrollFX.js')}}" defer></script>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/core.js"></script>
+{% endblock %} 
+
+
+
+    
+    
+
+   
+
+
+
+
+

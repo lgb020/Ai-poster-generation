@@ -1,0 +1,23 @@
+
+<!-- 导入包 -->
+{% extends 'base.html' %}
+
+<!-- 标题 -->
+{% block title %}
+
+{% endblock %}
+
+<!-- 额外内容 -->
+{% block ex %}
+
+{% endblock %} 
+
+<!-- 主函数 -->
+{% block main %}
+
+{% endblock %}
+
+<!-- 脚本内容 -->
+{% block js %}
+
+{% endblock %} 

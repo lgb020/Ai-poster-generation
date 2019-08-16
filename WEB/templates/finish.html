@@ -1,0 +1,145 @@
+
+<!-- 导入包 -->
+{% extends 'base.html' %}
+
+<!-- 标题 -->
+{% block title %}
+<title>Finish</title>
+{% endblock %}
+
+<!-- 额外内容 -->
+{% block ex %}
+
+{% endblock %} 
+
+<!-- 主函数 -->
+{% block main %}
+
+
+
+<div class="bloc l-bloc" id="bloc-9">
+    <div class="container bloc-lg">
+      <div class="row">
+        <div class="col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+          <img src="{{url_for('static',filename='img/results.jpg')}}"  class="img-fluid mx-auto d-block lazyload" />
+          <!-- <a href="index" class="btn btn-d btn-lg">重做</a> -->
+          <!-- <a href="download/{{finish_img}}" class="btn btn-d btn-lg btn-margin-left" target="_blank">保存</a> -->
+          <!-- <a href="style" class="btn btn-d btn-lg btn-返回-margin-left">返回</a> -->
+        </div>
+      </div>
+    </div>
+</div>
+
+<p class="hero-cta is-revealing" style="visibility: visible; opacity:0.8">
+  <a class="button button-primary button-shadow" href="/">重做</a>
+  <a class="button button-primary button-shadow" href="download/img/results.jpg" target="_blank">保存</a>
+  <a class="button button-primary button-shadow" href="style">返回</a>
+</p>
+
+
+<div class="hero-cta is-revealing" style="visibility: visible; opacity:0.8">
+  <div class="btn" style="display: inline-grid;width: 434px;color: #fff;font-size: 14px;">
+    <div class="btn-back" style="line-height: 5.5;width: 100%;">
+      <!-- 内容 -->
+      <a class="button button-primary button-shadow" id="x2">X2</a>
+      <a class="button button-primary button-shadow" id="x4">X4</a>
+      <a class="button button-primary button-shadow" id="x8">X8</a>
+    </div>
+    <div class="btn-front ">超分辨率保存</div>
+  </div>
+</div>
+  
+
+<!-- <p class="hero-cta is-revealing" style="visibility: visible;"></p> -->
+<!-- <p class="hero-cta is-revealing" style="visibility: visible;"></p> -->
+
+{% endblock %}
+
+<!-- 脚本内容 -->
+{% block js %}
+<!-- Additional JS END -->
+
+<script src="{{url_for('static',filename='js/jquery-3.3.1.min.js')}}"></script>
+<script src="{{url_for('static',filename='js/bootstrap.bundle.min.js')}}"></script>
+<script src="{{url_for('static',filename='js/blocs.min.js')}}"></script>
+<script src="{{url_for('static',filename='js/lazysizes.min.js')}}" defer></script>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/core.js"></script>
+<script src="{{url_for('static',filename='js/script.js')}}"></script>
+<style type="text/css" media="screen">
+  .project-title {
+    position: absolute;
+    left: 25px;
+    bottom: 8px;
+
+    font-size: 16px;
+    color: #444;
+  }
+
+  .credits {
+    position: absolute;
+    right: 20px;
+    bottom: 25px;
+    font-size: 15px;
+    z-index: 20;
+    color: #444;
+    vertical-align: middle;
+  }
+
+  .credits *+* {
+    margin-left: 15px;
+  }
+
+  .credits a {
+    padding: 8px 10px;
+    color: #444;
+    border: 2px solid #999;
+    text-decoration: none;
+  }
+
+  .credits a:hover {
+    border-color: #555;
+    color: #222;
+  }
+
+  @media screen and (max-width: 1040px) {
+    .project-title {
+      display: none;
+    }
+
+    .credits {
+      width: 100%;
+      left: 0;
+      right: auto;
+      bottom: 0;
+      padding: 30px 0;
+      background: #ddd;
+      text-align: center;
+    }
+
+    .credits a {
+      display: inline-block;
+      margin-top: 7px;
+      margin-bottom: 7px;
+    }
+  }
+</style>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#x2").click(function(){
+			$.post("select_SR",{multiple:2},function(){
+				window.location.href="download/img/results.jpg"
+			})
+		})
+		$("#x4").click(function(){
+			$.post("select_SR",{multiple:4},function(){
+				window.location.href="download/img/results.jpg"
+			})
+		})
+		$("#x8").click(function(){
+			$.post("select_SR",{multiple:8},function(){
+				window.location.href="download/img/results.jpg"
+			})
+		})
+	})
+</script>
+{% endblock %} 
