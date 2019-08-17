@@ -28,11 +28,12 @@
 
 | 相关技术 | 相关资料 |
 | --- | --- |
-| BERT命名实体识别\PoolNet抠图 | |
-| 风格迁移 | |
-| 超分辨率 | |
+| BERT命名实体识别 | [[论文链接]](https://arxiv.org/abs/1810.04805) |
+| PoolNet抠图 | [[论文链接]](https://arxiv.org/abs/1904.09569) |
+| 风格迁移 | [[论文链接]](https://cs.stanford.edu/people/jcjohns/papers/eccv16/JohnsonECCV16.pdf) |
+| 超分辨率 | [[论文链接]](http://openaccess.thecvf.com/content_cvpr_2017/papers/Ledig_Photo-Realistic_Single_Image_CVPR_2017_paper.pdf) |
 | 规则:模板多样化 | |
-| Web端实现 | |
+| Web端实现 | Flask |
 
 ## 使用方法
 1. 安装相关环境
@@ -41,7 +42,7 @@
     
 2. 本地端部署
     * 在[WEB](./WEB)目录下运行 ```flask run```
-    * 打开**http://127.0.0.1:5000/**网址
+    * 打开**http://127.0.0.1:5000**网址
 3. 服务端部署
     * 打开80端口后在[WEB](./WEB)目录下运行```python app.py```
     * 打开**xxx.xxx.xxx.xxx**公网网址
