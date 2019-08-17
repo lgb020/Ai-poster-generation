@@ -11,10 +11,13 @@
 ![海报](media/%E6%B5%B7%E6%8A%A5.png)
 
 ## 项目介绍
-最终效果以web端呈现给用户
+1. WEB端呈现
 ![网页展示](media/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA-1.png)
-![效果1](media/%E6%95%88%E6%9E%9C1.png)
+1. 效果
 
+<img src="media/%E6%95%88%E6%9E%9C1.png" width="500" hegiht="313" align=center />
+
+3. 对比与参考
 
 | 传统生成海报的不足 | 本项目的思考方法 |
 | --- | --- |
@@ -31,14 +34,23 @@
 | 规则:模板多样化 | |
 | Web端实现 | |
 
-# 使用方法
+## 使用方法
 1. 安装相关环境
-2. 在[WEB](./media/mindmap)目录下运行 
-```flask run
-```
-3.打开**http://127.0.0.1:5000/**网址
-
-# 模型文件存放
-final.pth --> poster_project/SEG/results/run-1/models/
-model.ckpt-1524.data-00000-of-00001
-poster_project/NLP/ner-part/bert/output/result_dir/
+    * requirement...
+    * 镜像...
+    
+2. 本地端部署
+    * 在[WEB](./WEB)目录下运行 ```flask run```
+    * 打开**http://127.0.0.1:5000/**网址
+3. 服务端部署
+    * 打开80端口后在[WEB](./WEB)目录下运行```python app.py```
+    * 打开**xxx.xxx.xxx.xxx**公网网址
+    
+## 模型文件使用
+1. 模型下载
+    * [Google云盘](https://drive.google.com/drive/folders/1dc12sjI0S7-GLn0208qa1L209qHRC1jD?usp=sharing)
+    * [百度云盘](https://pan.baidu.com/s/1IkYpqnj77P27OUHS1Vzu_A)提取码: 4949
+1. 模型存放
+    * final.pth --> poster_project/SEG/results/run-1/models/
+    * model.ckpt-1524.data-00000-of-00001 --> poster_project/NLP/ner-part/bert/output/result_dir/
+    * vgg19-dcbb9e9d.pth --> 在Web端运行自定义风格时请查阅命令栏储存地址
